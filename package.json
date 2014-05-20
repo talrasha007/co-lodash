@@ -1,0 +1,14 @@
+{
+    "name": "codash",
+    "version": "0.0.1",
+    "description": "Co sionextension for lodash",
+    "readmeFile": "README.md",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/talrasha007/codash.git"
+    },
+    "dependencies": {
+        "lodash": "*",
+        "async": "*"
+    }
+}
