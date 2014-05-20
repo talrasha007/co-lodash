@@ -8,7 +8,9 @@
         "url": "https://github.com/talrasha007/codash.git"
     },
     "dependencies": {
-        "lodash": "*",
-        "async": "*"
+        "lodash": "*"
+    },
+    "devDependencies": {
+        "co": "*"
     }
 }
