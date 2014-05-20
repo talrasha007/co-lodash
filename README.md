@@ -1,9 +1,17 @@
 #codash
  Extend lodash to support harmony.
 
+## API
+ - _.isGenerator(obj)
+ - _.coEach(collection, fn) // fn params (item, index, collection)
+ - _.coMap(collection, fn)  // fn params (item, index, collection)
+ - _.coReduce(collection, fn, memo) //fn params (memo, item, index, collection)
+
 ## Example
 
 ```js
+var _ = require('codash'); // yes, it can do exactly the same as lodash, because it is lodash with some extendsions.
+
 function sleep(mill) { return function (cb) { setTimeout(cb, mill); }; }
 
 co(function *() {
