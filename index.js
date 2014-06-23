@@ -29,6 +29,17 @@ _.mixin({
         return obj && obj.constructor && obj.constructor.name === 'GeneratorFunction';
     },
 
+    sleep: function (mill) {
+        return function (cb) { setTimeout(cb, mill); };
+    },
+
+    makeAsync: function (cb, thisArg) {
+        return function () {
+            var args = arguments;
+            process.nextTick(function () { cb.apply(thisArg, args); });
+        };
+    },
+
     coEach: function* (collection, callback, thisArg) {
         return yield* eachImpl(collection, makeCallback(callback, thisArg));
     },
