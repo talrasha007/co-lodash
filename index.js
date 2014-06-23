@@ -1,5 +1,4 @@
-var async = require('async'),
-    _ = module.exports = require('lodash');
+var _ = module.exports = require('lodash');
 
 function makeCallback(callback, thisArg) {
     return _.isGenerator(callback) ?
