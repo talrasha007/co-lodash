@@ -1,5 +1,5 @@
-#codash
- Extend lodash to support harmony.
+#co-lodash
+ Extend lodash to make it work with [co](https://www.npmjs.com/package/co).
 
 ## API
  - _.isGenerator(obj)
@@ -11,7 +11,7 @@
 ## Example
 
 ```js
-var _ = require('codash'); // yes, it can do exactly the same as lodash, because it is lodash with some extendsions.
+var _ = require('co-lodash'); // yes, it can do exactly the same as lodash, because it is lodash with some extendsions.
 
 co(function *() {
     yield* _.coEach([1,2,3,4,5], function* (v) {
@@ -30,5 +30,5 @@ co(function *() {
         yield _.sleep(1000);
         return m + v;
     }, 0));
-})();
+});
 ```

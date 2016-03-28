@@ -1,6 +1,6 @@
 {
-    "name": "codash",
-    "version": "0.0.2",
+    "name": "co-lodash",
+    "version": "0.0.3",
     "description": "Co sionextension for lodash",
     "readmeFile": "README.md",
     "repository": {
@@ -11,6 +11,6 @@
         "lodash": "*"
     },
     "devDependencies": {
-        "co": "*"
+        "co": "^4.6.0"
     }
 }
