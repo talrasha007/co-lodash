@@ -5,7 +5,7 @@
     "readmeFile": "README.md",
     "repository": {
         "type": "git",
-        "url": "https://github.com/talrasha007/codash.git"
+        "url": "https://github.com/talrasha007/co-lodash.git"
     },
     "dependencies": {
         "lodash": "*"
