@@ -18,4 +18,4 @@ co(function *() {
         yield _.sleep(1000);
         return m + v;
     }, 0));
-})();
+});

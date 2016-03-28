@@ -1,16 +1,16 @@
 {
     "name": "codash",
-    "version": "0.0.2",
-    "description": "Co sionextension for lodash",
+    "version": "0.0.3-1",
+    "description": "co extension for lodash",
     "readmeFile": "README.md",
     "repository": {
         "type": "git",
-        "url": "https://github.com/talrasha007/codash.git"
+        "url": "https://github.com/talrasha007/co-lodash.git"
     },
     "dependencies": {
         "lodash": "*"
     },
     "devDependencies": {
-        "co": "*"
+        "co": "^4.6.0"
     }
 }

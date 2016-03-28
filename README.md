@@ -1,5 +1,5 @@
-#codash
- Extend lodash to support harmony.
+# codash
+ *It's renamed to [co-lodash](https://www.npmjs.com/package/co-lodash)*
 
 ## API
  - _.isGenerator(obj)
@@ -30,5 +30,5 @@ co(function *() {
         yield _.sleep(1000);
         return m + v;
     }, 0));
-})();
+});
 ```
