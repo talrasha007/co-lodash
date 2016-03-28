@@ -1,7 +1,7 @@
 {
     "name": "co-lodash",
-    "version": "0.0.3",
-    "description": "Co sionextension for lodash",
+    "version": "0.0.4",
+    "description": "Co extension for lodash",
     "readmeFile": "README.md",
     "repository": {
         "type": "git",
