@@ -29,7 +29,9 @@ _.mixin({
     },
 
     sleep: function (mill) {
-        return function (cb) { setTimeout(cb, mill); };
+        return new Promise(function (resolve) {
+          setTimeout(resolve, mill);
+        });
     },
 
     makeAsync: function (cb, thisArg) {

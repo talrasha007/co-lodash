@@ -1,6 +1,6 @@
 {
     "name": "codash",
-    "version": "0.0.3-1",
+    "version": "0.0.4",
     "description": "co extension for lodash",
     "readmeFile": "README.md",
     "repository": {
