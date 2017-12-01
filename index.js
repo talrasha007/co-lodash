@@ -66,4 +66,16 @@ _.mixin({
 
         return accumulator;
     }
+    
+    coFilter: function* (collection, predicate, thisArg) {
+        callback = makeCallback(callback, thisArg);
+        
+        var ret = [];
+        yield* eachImpl(collection, function *(item, index, coll) {
+            if (yield* predicate(item, index, coll)) {
+                ret.push(item);
+            }
+        });
+        return ret;
+    }
 });
