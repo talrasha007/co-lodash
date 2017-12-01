@@ -3,6 +3,7 @@
 
 ## API
  - _.isGenerator(obj)
+ - _.isAsyncFunction(obj)
  - _.sleep(mill)
  - _.coEach(collection, fn) // fn params (item, index, collection)
  - _.coMap(collection, fn)  // fn params (item, index, collection)
@@ -29,6 +30,11 @@ co(function *() {
         console.log('reduce:', v);
         yield _.sleep(1000);
         return m + v;
+    }, 0));
+
+    console.log(yield* _.coFilter([1,2,3,4,5], function*(v) {
+        yield _.sleep(1000);
+        return v % 2;
     }, 0));
 });
 ```

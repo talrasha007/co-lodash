@@ -18,4 +18,10 @@ co(function *() {
         yield _.sleep(1000);
         return m + v;
     }, 0));
+
+    console.log(yield* _.coFilter([1,2,3,4,5], function* (v) {
+        console.log('filter:', v);
+        yield _.sleep(1000);
+        return v % 2;
+    }, 0));
 });

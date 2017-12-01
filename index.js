@@ -28,6 +28,10 @@ _.mixin({
         return obj && obj.constructor && obj.constructor.name === 'GeneratorFunction';
     },
 
+    isAsyncFunction: function (obj) {
+        return obj && obj.constructor && obj.constructor.name === 'AsyncFunction';
+    },
+
     sleep: function (mill) {
         return new Promise(function (resolve) {
           setTimeout(resolve, mill);
@@ -65,10 +69,10 @@ _.mixin({
         });
 
         return accumulator;
-    }
+    },
     
     coFilter: function* (collection, predicate, thisArg) {
-        callback = makeCallback(callback, thisArg);
+        var callback = makeCallback(callback, thisArg);
         
         var ret = [];
         yield* eachImpl(collection, function *(item, index, coll) {
@@ -76,6 +80,7 @@ _.mixin({
                 ret.push(item);
             }
         });
+
         return ret;
     }
 });
