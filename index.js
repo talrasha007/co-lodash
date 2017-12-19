@@ -24,6 +24,15 @@ var eachImpl = function *(collection, callback) {
 };
 
 _.mixin({
+    extendProperties: function (target, src) {
+        Object.defineProperties(
+          target,
+          Object.getOwnPropertyDescriptors(src)
+        );
+
+        return target;
+    },
+
     isGenerator: function (obj) {
         return obj && obj.constructor && obj.constructor.name === 'GeneratorFunction';
     },

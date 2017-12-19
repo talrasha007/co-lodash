@@ -2,6 +2,7 @@
  Extend lodash to make it work with [co](https://www.npmjs.com/package/co).
 
 ## API
+ - _.extendProperties(target, src)
  - _.isGenerator(obj)
  - _.isAsyncFunction(obj)
  - _.sleep(mill)
@@ -13,6 +14,8 @@
 
 ```js
 var _ = require('co-lodash'); // yes, it can do exactly the same as lodash, because it is lodash with some extendsions.
+
+console.log(_.extendProperties({}, { get foo() { return 1; }}));
 
 co(function *() {
     yield* _.coEach([1,2,3,4,5], function* (v) {

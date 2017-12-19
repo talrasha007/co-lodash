@@ -1,6 +1,8 @@
 var co = require('co'),
     _ = require('../');
 
+console.log(_.extendProperties({}, { get foo() { return 1; }}));
+
 co(function *() {
     yield* _.coEach([1,2,3,4,5], function* (v) {
         console.log('each:', v);
